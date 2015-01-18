@@ -1,4 +1,5 @@
 library(httr)
+library(httpuv) ## Need both, I think
 
 # 1. Find OAuth settings for github:
 #    http://developer.github.com/v3/oauth/
@@ -10,7 +11,7 @@ oauth_endpoints("github")
 #
 #    Insert your client ID and secret below - if secret is omitted, it will
 #    look it up in the GITHUB_CONSUMER_SECRET environmental variable.
-myapp <- oauth_app("github", "56b637a5baffac62cad9")
+myapp <- oauth_app("github", key = "56b637a5baffac62cad9", secret = "e55a98341c25bd42b54a6d3a653524ba8ba13e45")
 
 # 3. Get OAuth credentials
 github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
