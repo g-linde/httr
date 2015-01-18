@@ -11,7 +11,7 @@ oauth_endpoints("github")
 #
 #    Insert your client ID and secret below - if secret is omitted, it will
 #    look it up in the GITHUB_CONSUMER_SECRET environmental variable.
-myapp <- oauth_app("github", key = "56b637a5baffac62cad9", secret = "e55a98341c25bd42b54a6d3a653524ba8ba13e45")
+myapp <- oauth_app("github", key = "myClentKey", secret = "mySecretKey")
 
 # 3. Get OAuth credentials
 github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
